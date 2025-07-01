@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if title %}{{ title }} - {% endif %}Your Name</title>
+    <meta name="description" content="{{ description or 'Writer, consultant, and thought leader sharing insights on [your topics]' }}">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <a href="/" class="nav-logo">Nate B Jones</a>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="#writings">Writing</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <main class="main">
+        {{ content | safe }}
+    </main>
+
+    <footer class="footer">
+        <div id="contact" class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Stay Connected</h3>
+                    <p>Get my latest insights delivered to your inbox.</p>
+                    <a href="https://substack.com/@natesnewsletter" class="btn btn-primary" target="_blank">Subscribe to Newsletter</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#writings">Latest Writing</a></li>
+                        <li><a href="#services">Work With Me</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <div class="social-links">
+                        <a href="https://x.com/natebjones" target="_blank">X</a>
+                        <a href="https://www.linkedin.com/in/natebjones/" target="_blank">LinkedIn</a>
+                        <a href="https://substack.com/@natesnewsletter" target="_blank">Substack</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; PLACEHOLDER: 2025 Nate B Jones. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>
